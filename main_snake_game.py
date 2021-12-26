@@ -107,6 +107,9 @@ def to_continue_game(score):
     keep_loop = True
     while keep_loop:
         for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_q:
                     decision = False
